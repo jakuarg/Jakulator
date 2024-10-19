@@ -1,0 +1,142 @@
+/* Estilos generales */
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1a2e, #16213e); /* Fondo oscuro estilo Cyberwave */
+    color: white;
+    position: relative;
+}
+
+/* Título Cyberwave */
+.title {
+    font-size: 4rem;
+    color: #00ffff; /* Azul neón */
+    text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7), 0px 0px 20px rgba(0, 255, 255, 0.7);
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+/* Estilo de la calculadora */
+.calculator {
+    width: 300px;
+    background-color: rgba(30, 30, 30, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5), 0px 0px 50px rgba(255, 0, 255, 0.3); /* Resplandor Cyberwave */
+    z-index: 1;
+}
+
+#display {
+    width: 100%;
+    height: 50px;
+    background-color: #0f0f1f;
+    color: #00ff00; /* Texto verde neón */
+    border: none;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    border-radius: 5px;
+}
+
+.memory-display {
+    color: #ff00ff; /* Púrpura neón */
+    text-align: right;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.buttons, .memory-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    background-color: #1f1f2e;
+    color: #00ffff; /* Azul neón */
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.4), 0px 0px 20px rgba(255, 0, 255, 0.3); /* Resplandor */
+}
+
+button:hover {
+    background-color: #2f2f3f;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.7), 0px 0px 30px rgba(255, 0, 255, 0.5); /* Efecto de resplandor más fuerte */
+}
+
+/* Fondo animado con estrellas Cyberwave */
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: black; /* Fondo oscuro */
+}
+
+/* Estrellas cayendo */
+.star {
+    position: absolute;
+    color: white;
+    font-size: 12px; /* Tamaño de las estrellas */
+    opacity: 0.8;
+    animation: fall linear infinite; /* Movimiento de caída */
+}
+
+/* Animación de caída de las estrellas */
+@keyframes fall {
+    from {
+        transform: translateY(-100px); /* Comienza fuera de la pantalla superior */
+    }
+    to {
+        transform: translateY(100vh); /* Cae hasta la parte inferior */
+    }
+}
+
+/* Generar el parpadeo de las estrellas */
+@keyframes twinkling {
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.button-container {
+    text-align: center;
+    margin-top: 20px; /* Espacio entre la calculadora y el botón */
+}
+
+.github-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #4CAF50; /* Color verde */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.github-button:hover {
+    background-color: #45a049; /* Color más oscuro al pasar el mouse */
+}
+
